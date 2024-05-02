@@ -9,6 +9,10 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc(0.2*(100vw - 32px - 15px)) calc(0.8*(100vw - 32px - 15px));
+  grid-template-rows: calc(0.1*(100vh - 32px - 45px)) calc(0.1*(100vh - 32px - 45px)) calc(0.7*(100vh - 32px - 45px)) calc(0.1*(100vh - 32px - 45px));
+  gap: 15px;
 }
 
 .container div {
@@ -22,10 +26,12 @@ html {
 
 .header {
   background-color: #006157;
+  grid-column: 1 / 3;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-row: 2 / 4;
 }
 
 .nav {
@@ -38,6 +44,7 @@ html {
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / 3;
 }
 
 .article p {
